@@ -15,7 +15,10 @@ namespace SimpleClassConsole
         private string _producer;
         private int _quantity;
         private double _weight;
-        private double _expirationDate;
+        private double _expirationDateDay;
+        private double _expirationDateMoon;
+        private double _expirationDateYear;
+
         public void setName(string val) { Name = val; }
         public string getName() { return Name; }
 
@@ -30,12 +33,17 @@ namespace SimpleClassConsole
 
         public void setQuantity(int val) { _quantity = val; }
         public int getQuantity() { return _quantity; }
-
         public void setWeight(double val) { _weight = val; }
         public double getWeight() { return _weight; }
-
-
-      
+        public double GetExpirationDate(){ return _expirationDateDay;}
+        public double GetExpirationDatemoon(){ return _expirationDateMoon;}
+        public double GetExpirationDateYear(){return _expirationDateYear;}
+        public void SetExpirationDateDay() { _expirationDateDay = Convert.ToInt32(Console.ReadLine()); }
+        public void SetExpirationDatemoon() { _expirationDateMoon = Convert.ToInt32(Console.ReadLine()); }
+        public void SetExpirationDateYear() { _expirationDateYear = Convert.ToInt32(Console.ReadLine()); }
+        public void WriteLineExpirationDateYear() { Console.WriteLine(_expirationDateYear); }
+        public void WriteLineExpirationDateMoon() { Console.WriteLine(_expirationDateMoon); }
+        public void WriteLineExpirationDateDay() { Console.WriteLine(_expirationDateDay); }
         public Product(string name = "unknown", double price = 0, string producer = "unknown", int quantity = 0, double weight = 0)
         {
             Name = name;
